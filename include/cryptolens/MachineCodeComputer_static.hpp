@@ -22,7 +22,7 @@ public:
 #ifndef CRYPTOLENS_20190701_ALLOW_IMPLICIT_CONSTRUCTORS
   explicit
 #endif
-  MachineCodeComputer_static(basic_Error & e) {}
+  MachineCodeComputer_static(basic_Error & /*e*/) {}
 
   void
   set_machine_code(basic_Error & e, std::string machine_code);

@@ -21,7 +21,7 @@ public:
 #ifndef CRYPTOLENS_20190701_ALLOW_IMPLICIT_CONSTRUCTORS
   explicit
 #endif
-  ResponseParser_ArduinoJson5(basic_Error & e) {}
+  ResponseParser_ArduinoJson5(basic_Error & /*e*/) {}
 
   optional<LicenseKeyInformation> make_license_key_information(basic_Error & e, RawLicenseKey const& raw_license_key) const;
   optional<LicenseKeyInformation> make_license_key_information(basic_Error & e, optional<RawLicenseKey> const& raw_license_key) const;

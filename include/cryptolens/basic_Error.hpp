@@ -109,9 +109,9 @@ public:
    */
   explicit operator bool() const { return subsystem_ != errors::Subsystem::Ok; }
 
-  virtual int get_subsystem(api::main api) const noexcept { return subsystem_; }
-  virtual int get_reason(api::main api) const noexcept { return reason_; }
-  virtual size_t get_extra(api::main api) const noexcept { return extra_; }
+  virtual int get_subsystem(api::main /*api*/) const noexcept { return subsystem_; }
+  virtual int get_reason(api::main /*api*/) const noexcept { return reason_; }
+  virtual size_t get_extra(api::main /*api*/) const noexcept { return extra_; }
 
   /**
    * Can be used to reset the Error object to the initial state.
@@ -119,12 +119,12 @@ public:
    * Can be used for reusing the same Error object after an error
    * has occured.
    */
-  virtual void reset(api::main api) { subsystem_ = errors::Subsystem::Ok; reason_ = 0; extra_ = 0; }
+  virtual void reset(api::main /*api*/) { subsystem_ = errors::Subsystem::Ok; reason_ = 0; extra_ = 0; }
 
-  virtual void set(api::main api, int subsystem) { subsystem_ = subsystem; }
-  virtual void set(api::main api, int subsystem, int reason) { subsystem_ = subsystem; reason_ = reason; }
-  virtual void set(api::main api, int subsystem, int reason, size_t extra) { subsystem_ = subsystem; reason_ = reason; extra_ = extra; }
-  virtual void set_call(api::main api, int call) { call_ = call; }
+  virtual void set(api::main /*api*/, int subsystem) { subsystem_ = subsystem; }
+  virtual void set(api::main /*api*/, int subsystem, int reason) { subsystem_ = subsystem; reason_ = reason; }
+  virtual void set(api::main /*api*/, int subsystem, int reason, size_t extra) { subsystem_ = subsystem; reason_ = reason; extra_ = extra; }
+  virtual void set_call(api::main /*api*/, int call) { call_ = call; }
 };
 
 } // namespace v20190401

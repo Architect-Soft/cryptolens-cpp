@@ -333,7 +333,7 @@ ResponseParser_ArduinoJson5::parse_last_message_response(basic_Error & e, std::s
     if (msg["created"].is<int>() &&
         msg["content"].is<const char*>() && msg["content"].as<const char*>() != NULL)
     {
-      if (msg["created"] > created_max) { created_max = msg["created"]; i_max = i; }
+      if (msg["created"] > created_max) { created_max = msg["created"]; i_max = static_cast<int>(i); }
     }
   }
 

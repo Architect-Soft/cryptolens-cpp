@@ -12,7 +12,7 @@ public:
 #ifndef CRYPTOLENS_20190701_ALLOW_IMPLICIT_CONSTRUCTORS
   explicit
 #endif
-  CorrectProductValidator_(basic_Error & e) {}
+  CorrectProductValidator_(basic_Error & /*e*/) {}
 
   void
   validate(basic_Error & e, Env & env) {

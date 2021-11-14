@@ -15,7 +15,7 @@ public:
 #ifndef CRYPTOLENS_20190701_ALLOW_IMPLICIT_CONSTRUCTORS
   explicit
 #endif
-  NotExpiredValidator_kernel32_(basic_Error & e) {}
+  NotExpiredValidator_kernel32_(basic_Error & /*e*/) {}
 
   void validate(basic_Error & e, Env & env) {
     std::uint64_t expires = env.get_license_key_information().get_expires();
